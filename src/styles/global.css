@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-poppins: var(--font-poppins);
+  --font-inter: var(--font-inter);
+  --color-primary: #123EAF;
+  --color-secondary: #7A2CF3;
+  --color-complementary: #20D6C7;
+  --linear-bg: 90deg, #123EAF 0%, #7A2CF3 100%;
+  --linear-btns: 135deg, #20D6C7 0%, #7A2CF3 100%;
+  --linear-title: 90deg, #123EAF 0%, #4B5DFF 35%, #7A2CF3 70%, #20D6C7 100%;
+}
+
+.btn {
+  @apply bg-linear-(--linear-btns) py-3 px-4 text-white rounded-full;
+}

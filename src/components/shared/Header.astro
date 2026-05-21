@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets'
+import logo from '../../assets/images/logo.png'
+---
+
+<nav class="fixed left-0 right-0 top-0 z-10 bg-white ">
+  <div class="w-full max-w-7xl mx-auto flex items-center justify-between py-4">
+    <a href="#inicio">
+      <Image class="h-16 w-auto" src={logo} alt="Logo de la empresa"></Image>
+    </a>
+
+    <div class="text-poppins">
+      <ul class="flex items-center gap-10 text-lg font-medium tracking-wide">
+        <li><a class="" href="#inicio">Inicio</a></li>
+        <li><a class="" href="#historia">Nuestra Historia</a></li>
+        <li><a class="" href="#reconocimiento">Reconocimientos</a></li>
+        <li>
+          <a class="flex items-center btn" href="#afiliate">
+            Contáctanos 
+            <svg fill="#ffffff" version="1.1" class="h-4 pl-1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 123.97 123.97" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M27.961,99.367c-5.8,5.8-5.7,15.3,0.5,20.899c5.8,5.301,14.8,4.801,20.3-0.8l47.3-47.3c2.8-2.8,4.2-6.5,4.2-10.2 s-1.4-7.399-4.2-10.2l-47.2-47.3c-5.5-5.5-14.6-6.1-20.3-0.8c-6.1,5.6-6.3,15.1-0.5,20.9l30.2,30.399c3.9,3.9,3.9,10.2,0,14.101 L27.961,99.367z"></path> </g> </g></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

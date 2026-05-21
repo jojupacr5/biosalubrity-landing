@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+
+import logo from '../../assets/images/logo.png';
+import Whatsapp from '../../assets/icons/whatsapp.svg'
+import Facebook from '../../assets/icons/facebook.svg'
+import Instagram from '../../assets/icons/instagram.svg'
+---
+
+<footer class="flex flex-col items-center bg-white p-4">
+  <Image class="h-16 w-auto mt-4" src={logo} alt="Logo de la empresa"></Image>
+  <p class="text-base font-semibold text-slate-600">Seguridad sanitaria para un mundo más seguro.</p>
+  <div class="flex gap-4 py-4">
+    <a href="">
+      <Whatsapp class="w-8 h-8 opacity-70 hover:opacity-100 transition-opacity duration-300" />
+    </a>
+    <a href="">
+      <Facebook class="w-8 h-8 opacity-70 hover:opacity-100 transition-opacity duration-300" />
+    </a>
+    <a href="">
+      <Instagram class="w-8 h-8 opacity-70 hover:opacity-100 transition-opacity duration-300" />
+    </a>
+  </div>
+  <p class="text-xs text-slate-600">&copy; 2024 Biosalubrity. Todos los derechos reservados.</p>
+</footer>
