@@ -12,5 +12,88 @@
   "seo": {
     "title": "Biosalubrity - Seguridad Sanitaria para un Mundo Más Seguro",
     "description": "Protege vidas y negocios con nuestros servicios de seguridad sanitaria. Verificación, certificación y protección confiable."
+  },
+  "home": {
+    "hero": {
+      "title": "En los momentos más críticos, la seguridad sanitaria no fue una opción, fue la solución.",
+      "description": "Biosalubrity nació en plena pandemia para proteger vidas, apoyar a los estrablecimientos y reactivar la economía con confianza.",
+      "cta": "Conoce nuestra historia",
+      "tagline": "Seguridad sanitaria para un mundo",
+      "taglineHighlight": "más seguro."
+    },
+    "services": {
+      "protect": {
+        "title": "PROTEGEMOS",
+        "description": "Personas y establecimientos"
+      },
+      "verify": {
+        "title": "Verificamos",
+        "description": "Cumplimiento de protocoles"
+      },
+      "certify": {
+        "title": "Certificamos",
+        "description": "Con sellos confiables"
+      },
+      "care": {
+        "title": "Cuidamos",
+        "description": "La salud pública y la reactividad económica"
+      }
+    },
+    "history": {
+      "title": "Nacimos cuando más se necesitaba",
+      "subtitle": "Marzo 2020. El mundo se detuvo. Nosotros decidimos actuar.",
+      "stats": {
+        "lives": {
+          "number": "~40MIL",
+          "label1": "Vidas",
+          "label2": "Preservadas",
+          "description": "de forma preventiva en el momento que no había vacunas en el mundo."
+        },
+        "establishments": {
+          "number": "miles",
+          "label1": "de establecimientos",
+          "label2": "protegidos",
+          "description": "de diversos rubros implementando protocolos de bioseguridad."
+        },
+        "people": {
+          "number": "millones",
+          "label1": "de personas",
+          "label2": "atendidas",
+          "description": "en espacios más seguros gracias a nuestra plataforma y certificación."
+        },
+        "recovery": {
+          "number": "impulsamos",
+          "label1": "La reactivación",
+          "label2": "Económica",
+          "description": "generando confianza y contribuyendo a la recuperación del país."
+        }
+      }
+    },
+    "recognition": {
+      "title": "Reconocimientos que respaldan nuestro impacto",
+      "awards": {
+        "award1": {
+          "title": "Finalistas Premio de creatividad empresarial",
+          "subtitle": "Auditado por: Price Waterhouse Coopers"
+        },
+        "award2": {
+          "title": "Plataforma aprobada",
+          "subtitle": "Por médicos de inteligencia sanitaria del MINSA"
+        },
+        "award3": {
+          "title": "Reconocidos por el congreso de la republica",
+          "subtitle": ""
+        },
+        "award4": {
+          "title": "Plataforma aprobada",
+          "subtitle": "Reconocidos contra covid y por promover la reactivación económica"
+        }
+      }
+    },
+    "affiliate": {
+      "title": "Transformamos un momento de crisis en un legado de prevención y confianza",
+      "description": "Biosalubrity no solo fue parte de la solución, fue un actor clave para salvar vidas y construir un futuro más seguro.",
+      "cta": "Se parte del cambio"
+    }
   }
 }

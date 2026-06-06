@@ -31,7 +31,9 @@ const translations = locale === 'en' ? en : es;
     <!-- Desktop Menu - Hidden on sm and md -->
     <div class="hidden lg:block text-poppins">
       <ul class="flex items-center gap-10 text-base lg:text-base xl:text-lg font-medium tracking-wide">
-        <li><a href="#inicio" class="hover:text-blue-600 transition-colors">{locale === 'en' ? translations.nav.home : translations.nav.inicio}</a></li>
+        <li><a href="#inicio" class="hover:text-blue-600 transition-colors">
+          {locale === 'en' ? translations.nav.home : translations.nav.inicio}
+        </a></li>
         <li><a href="#historia" class="hover:text-blue-600 transition-colors">{locale === 'en' ? translations.nav.history : translations.nav.historia}</a></li>
         <li><a href="#reconocimiento" class="hover:text-blue-600 transition-colors">{locale === 'en' ? translations.nav.recognition : translations.nav.reconocimiento}</a></li>
         <li>

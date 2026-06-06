@@ -12,5 +12,88 @@
   "seo": {
     "title": "Biosalubrity - Public Health for a Safer World",
     "description": "Protect lives and businesses with our public health services. Verification, certification and trusted protection."
+  },
+  "home": {
+    "hero": {
+      "title": "In the most critical moments, public health was not an option—it was the solution.",
+      "description": "Biosalubrity was launched in the midst of the pandemic to protect lives, support businesses, and help the economy recover with confidence.",
+      "cta": "Learn about our history",
+      "tagline": "Public health for a",
+      "taglineHighlight": "safer world."
+    },
+    "services": {
+      "protect": {
+        "title": "WE PROTECT",
+        "description": "People and businesses"
+      },
+      "verify": {
+        "title": "WE VERIFY",
+        "description": "Compliance with protocols"
+      },
+      "certify": {
+        "title": "WE CERTIFY",
+        "description": "With trusted brands"
+      },
+      "care": {
+        "title": "WE PRIORITIZE",
+        "description": "Public health and economic recovery"
+      }
+    },
+    "history": {
+      "title": "We were founded when we were needed most",
+      "subtitle": "March 2020. The world stopped. We decided to act.",
+      "stats": {
+        "lives": {
+          "number": "~40MIL",
+          "label1": "Lives",
+          "label2": "Preserved",
+          "description": "through preventive measures at a time when there were no vaccines available worldwide."
+        },
+        "establishments": {
+          "number": "Thousands",
+          "label1": "of establishments",
+          "label2": "protected",
+          "description": "of various sectors implementing biosecurity protocols."
+        },
+        "people": {
+          "number": "Millions",
+          "label1": "of people",
+          "label2": "served",
+          "description": "in safer environments thanks to our platform and certification."
+        },
+        "recovery": {
+          "number": "promote",
+          "label1": "Economic",
+          "label2": "Reactivation",
+          "description": "generating confidence and contributing to the country's recovery."
+        }
+      }
+    },
+    "recognition": {
+      "title": "Awards that underscore our impact",
+      "awards": {
+        "award1": {
+          "title": "Finalists for the Business Creativity Award",
+          "subtitle": "Audited by: Price Waterhouse Coopers"
+        },
+        "award2": {
+          "title": "Approved platform",
+          "subtitle": "By health intelligence physicians at the Ministry of Health"
+        },
+        "award3": {
+          "title": "Recognized by the Congress of the Republic",
+          "subtitle": ""
+        },
+        "award4": {
+          "title": "Approved platform",
+          "subtitle": "Recognized against covid and for promoting economic reactivation"
+        }
+      }
+    },
+    "affiliate": {
+      "title": "We turned a moment of crisis into a legacy of prevention and trust",
+      "description": "Biosalubrity wasn't just part of the solution, it was a key player in saving lives and building a safer future.",
+      "cta": "Be part of the change"
+    }
   }
 }

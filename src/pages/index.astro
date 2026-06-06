@@ -19,24 +19,29 @@ import minsaLogo from '../assets/images/minsa-logo.png';
 import congresoLogo from '../assets/images/congreso-logo.png';
 import afiliateMobile from '../assets/images/afiliate-mobile.png';
 import afiliateDesktop from '../assets/images/afiliate-desktop.png';
+
+import es from '../locales/es.json';
+import en from '../locales/en.json';
+
+const locale = Astro.currentLocale;
+const t = locale === 'en' ? en.home : es.home;
 ---
 
 <Layout>
-
 	<section id="inicio" class="mt-16 md:mt-18 lg:mt-22 xl:mt-24">
 		<div class="max-w-7xl mx-auto px-4 md:px-6 pt-8 md:py-28 lg:py-20">
 			<div class="flex flex-col md:max-w-1/2 lg:max-w-110 font-poppins">
 				<h1 class="tracking-wider md:tracking-wide leading-normal md:leading-snug text-3xl lg:text-5xl font-black bg-linear-(--linear-title) bg-clip-text text-transparent mb-6 md:mb-2">
-					En los momentos más críticos, la seguridad sanitaria no fue una opción, fue la solución.
+					{t.hero.title}
 				</h1>
-				<p class="text-base leading-relaxed md:text-lg font-medium mb-6">Biosalubrity nació en plena pandemia para proteger vidas, apoyar a los estrablecimientos y reactivar la economía con confianza.</p>
+				<p class="text-base leading-relaxed md:text-lg font-medium mb-6">{t.hero.description}</p>
 				<div class="mb-0 lg:mb-6">
 					<a href="#historia" class="btn w-fit flex items-center px-3">
-						Conoce nuestra historia 
+						{t.hero.cta}
 						<svg fill="#ffffff" version="1.1" class="h-4 pl-1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 123.97 123.97" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M27.961,99.367c-5.8,5.8-5.7,15.3,0.5,20.899c5.8,5.301,14.8,4.801,20.3-0.8l47.3-47.3c2.8-2.8,4.2-6.5,4.2-10.2 s-1.4-7.399-4.2-10.2l-47.2-47.3c-5.5-5.5-14.6-6.1-20.3-0.8c-6.1,5.6-6.3,15.1-0.5,20.9l30.2,30.399c3.9,3.9,3.9,10.2,0,14.101 L27.961,99.367z"></path> </g> </g></svg>
 					</a>	
 				</div>
-				<p class="hidden lg:block text-lg font-medium">Seguridad sanitaria para un mundo <span class="text-complementary">más seguro.</span></p>
+				<p class="hidden lg:block text-lg font-medium">{t.hero.tagline} <span class="text-complementary">{t.hero.taglineHighlight}</span></p>
 			</div>
 			<div class="md:hidden relative h-80 w-screen left-1/2 right-1/2 mx-[-50vw]">
 				<Image class="w-full h-full object-cover object-bottom-right" src={heroBg} alt="Imagen de seguridad sanitaria"></Image>
@@ -51,32 +56,32 @@ import afiliateDesktop from '../assets/images/afiliate-desktop.png';
 				<div class="servicio flex items-center md:w-75 p-4 lg:py-5 lg:px-10">
 					<Protegemos class="h-16 w-auto mr-4"/>
 					<div>
-						<h3 class="uppercase text-lg font-bold">PROTEGEMOS</h3>
-						<p class="text-base lg:max-w-30">Personas y establecimientos</p>
+						<h3 class="uppercase text-lg font-bold">{t.services.protect.title}</h3>
+						<p class="text-base lg:max-w-30">{t.services.protect.description}</p>
 					</div>
 				</div>
 				<div class="hidden lg:block h-16 w-0.5 bg-slate-200"></div>
 				<div class="servicio flex items-center md:w-75 p-4 lg:py-5 lg:px-10">
 					<Verificamos class="h-16 w-auto mr-4" />
 					<div>
-						<h3 class="uppercase text-lg font-bold">Verificamos</h3>
-						<p class="text-base lg:max-w-30">Cumplimiento de protocoles</p>
+						<h3 class="uppercase text-lg font-bold">{t.services.verify.title}</h3>
+						<p class="text-base lg:max-w-30">{t.services.verify.description}</p>
 					</div>
 				</div>
 				<div class="hidden lg:block h-16 w-0.5 bg-slate-200"></div>
 				<div class="servicio flex items-center md:w-75 p-4 lg:py-5 lg:px-10">
 					<Certificamos class="h-16 w-auto mr-4"/>
 					<div>
-						<h3 class="uppercase text-lg font-bold">Certificamos</h3>
-						<p class="text-base lg:max-w-30">Con sellos confiables</p>
+						<h3 class="uppercase text-lg font-bold">{t.services.certify.title}</h3>
+						<p class="text-base lg:max-w-30">{t.services.certify.description}</p>
 					</div>
 				</div>
 				<div class="hidden lg:block h-16 w-0.5 bg-slate-200"></div>
 				<div class="servicio flex items-center md:w-75 p-4 lg:py-5 lg:px-10">
 					<People class="h-16 w-auto mx-4 lg:ml-0"/>
 					<div>
-						<h3 class="uppercase text-lg font-bold">Cuidamos</h3>
-						<p class="text-base lg:max-w-40">La salud pública y la reactividad económica</p>
+						<h3 class="uppercase text-lg font-bold">{t.services.care.title}</h3>
+						<p class="text-base lg:max-w-40">{t.services.care.description}</p>
 					</div>
 				</div>
 			</div>
@@ -86,48 +91,48 @@ import afiliateDesktop from '../assets/images/afiliate-desktop.png';
 
 	<section id="historia" class="max-w-7xl mx-auto bg-white rounded-xl py-12 lg:py-16 px-4 lg:px-10 mb-12 lg:mb-20">
 		<h2 class="tracking-wide text-3xl font-black bg-linear-(--linear-btns) bg-clip-text text-transparent mb-4 text-center font-poppins">
-			Nacimos cuando más se necesitaba
+			{t.history.title}
 		</h2>
-		<p class="text-base lg:text-lg text-center font-inter mb-10">Marzo 2020. El mundo se detuvo. Nosotros decidimos actuar.</p>
+		<p class="text-base lg:text-lg text-center font-inter mb-10">{t.history.subtitle}</p>
 		<div class="flex flex-col md:flex-row justify-center items-center gap-5 flex-wrap">
 			<div class="flex md:max-w-75 lg:max-w-64 flex-col items-center justify-center p-5 border border-slate-200 rounded-xl shadow">
 				<Heart class="h-20 w-auto mb-0 lg:mb-4"/>
 				<div class="h-0.5 w-16 bg-slate-200 my-2"></div>
 				<div class="text-center">
-					<h3 class="uppercase text-4xl font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">~40MIL</h3>
-					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">Vidas</p>
-					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">Preservadas</p>
-					<p class="text-base font-inter">de forma preventiva en el momento que no había vacunas en el mundo.</p>
+					<h3 class="uppercase text-4xl font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">{t.history.stats.lives.number}</h3>
+					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">{t.history.stats.lives.label1}</p>
+					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">{t.history.stats.lives.label2}</p>
+					<p class="text-base font-inter">{t.history.stats.lives.description}</p>
 				</div>
 			</div>
 			<div class="flex md:max-w-75 lg:max-w-64 flex-col items-center justify-center p-5 border border-slate-200 rounded-xl shadow">
 				<Protegemos class="h-20 w-auto mb-0 lg:mb-4"/>
 				<div class="h-0.5 w-10 bg-slate-200 my-2"></div>
 				<div class="text-center">
-					<h3 class="uppercase text-4xl font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">miles</h3>
-					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">de establecimientos</p>
-					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">protegidos</p>
-					<p class="text-base font-inter">de diversos rubros implementando protocolos de bioseguridad.</p>
+					<h3 class="uppercase text-4xl font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">{t.history.stats.establishments.number}</h3>
+					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">{t.history.stats.establishments.label1}</p>
+					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">{t.history.stats.establishments.label2}</p>
+					<p class="text-base font-inter">{t.history.stats.establishments.description}</p>
 				</div>
 			</div>
 			<div class="flex md:max-w-75 lg:max-w-64 flex-col items-center justify-center p-5 border border-slate-200 rounded-xl shadow">
 				<Person class="h-20 w-auto mb-0 lg:mb-4"/>
 				<div class="h-0.5 w-10 bg-slate-200 my-2"></div>
 				<div class="text-center">
-					<h3 class="uppercase text-4xl font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">millones</h3>
-					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">de personas</p>
-					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">atendidas</p>
-					<p class="text-base font-inter">en espacios más seguros gracias a nuestra plataforma y certificación.</p>
+					<h3 class="uppercase text-4xl font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">{t.history.stats.people.number}</h3>
+					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">{t.history.stats.people.label1}</p>
+					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">{t.history.stats.people.label2}</p>
+					<p class="text-base font-inter">{t.history.stats.people.description}</p>
 				</div>
 			</div>
 			<div class="flex md:max-w-75 lg:max-w-64 flex-col items-center justify-center p-5 border border-slate-200 rounded-xl shadow">
 				<Analithics class="h-20 w-auto mb-0 lg:mb-4"/>
 				<div class="h-0.5 w-10 bg-slate-200 my-2"></div>
 				<div class="text-center">
-					<h3 class="uppercase text-4xl font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">impulsamos</h3>
-					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">La reactivación</p>
-					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">Económica</p>
-					<p class="text-base font-inter">generando confianza y contribuyendo a la recuperación del país.</p>
+					<h3 class="uppercase text-4xl font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">{t.history.stats.recovery.number}</h3>
+					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">{t.history.stats.recovery.label1}</p>
+					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">{t.history.stats.recovery.label2}</p>
+					<p class="text-base font-inter">{t.history.stats.recovery.description}</p>
 				</div>
 			</div>
 		</div>
@@ -135,7 +140,7 @@ import afiliateDesktop from '../assets/images/afiliate-desktop.png';
 
 	<section id="reconocimiento" class="max-w-7xl mx-auto bg-white rounded-xl py-12 lg:py-16 px-4 lg:px-10 mb-12 lg:mb-20">
 		<h2 class="tracking-wide text-3xl font-black bg-linear-(--linear-btns) bg-clip-text text-transparent my-4 text-center font-poppins">
-			Reconocimientos que respaldan nuestro impacto
+			{t.recognition.title}
 		</h2>
 		<div class="flex flex-col md:flex-row justify-center items-center md:items-start flex-wrap md:gap-5">
 			<div class="flex items-start justify-start md:max-w-75 lg:max-w-64 p-4 lg:p-5">
@@ -144,9 +149,9 @@ import afiliateDesktop from '../assets/images/afiliate-desktop.png';
 				</div>
 				<div class="text-left w-auto lg:max-w-40">
 					<h3 class="uppercase text-lg font-bold text-slate-800">
-						Finalistas Premio de creatividad empresarial
+						{t.recognition.awards.award1.title}
 					</h3>
-					<p class="text-sm font-inter">Auditado por: Price Waterhouse Coopers</p>
+					<p class="text-sm font-inter">{t.recognition.awards.award1.subtitle}</p>
 					<PwcLogo class="w-16 h-auto" />
 				</div>
 			</div>
@@ -156,9 +161,9 @@ import afiliateDesktop from '../assets/images/afiliate-desktop.png';
 				</div>
 				<div class="text-left w-auto lg:max-w-40">
 					<h3 class="uppercase text-lg font-bold text-slate-800">
-						Plataforma aprobada
+						{t.recognition.awards.award2.title}
 					</h3>
-					<p class="text-sm font-inter">Por médicos de inteligencia sanitaria del MINSA</p>
+					<p class="text-sm font-inter">{t.recognition.awards.award2.subtitle}</p>
 					<Image class="w-36 h-auto" src={minsaLogo} alt="Logo del MINSA"></Image>
 				</div>
 			</div>
@@ -168,7 +173,7 @@ import afiliateDesktop from '../assets/images/afiliate-desktop.png';
 				</div>
 				<div class="text-left w-auto lg:max-w-40">
 					<h3 class="uppercase text-lg font-bold text-slate-800">
-						Reconocidos por el congreso de la republica
+						{t.recognition.awards.award3.title}
 					</h3>
 					<Image class="h-20 lg:h-24 w-auto" src={congresoLogo} alt="Logo del MINSA"></Image>
 				</div>
@@ -179,9 +184,9 @@ import afiliateDesktop from '../assets/images/afiliate-desktop.png';
 				</div>
 				<div class="text-left w-auto lg:max-w-40">
 					<h3 class="uppercase text-lg font-bold text-slate-800">
-						Plataforma aprobada
+						{t.recognition.awards.award4.title}
 					</h3>
-					<p class="text-sm font-inter">Reconocidos contra covid y por promover la reactivación económica</p>
+					<p class="text-sm font-inter">{t.recognition.awards.award4.subtitle}</p>
 				</div>
 			</div>
 		</div>
@@ -190,14 +195,14 @@ import afiliateDesktop from '../assets/images/afiliate-desktop.png';
 	<section id="afiliate" class=" max-w-7xl w-full px-4 h-auto mb-4 lg:mb-12 mx-auto">
 		<div id="afiliateBg" class="relative w-full rounded-2xl p-4 md:max-w-7/12 lg:max-w-none lg:py-32 lg:px-10 lg:mb-20 md:mx-auto">
 			<h3 class="tracking-wide text-white text-2xl md:text-3xl font-black my-4 text-left font-poppins max-w-120 leading-snug">
-				Transformamos un momento de crisis en un legado de prevención y confianza
+				{t.affiliate.title}
 			</h3>
 			<p class="max-w-112.5 text-base md:text-xl text-white mb-96 lg:mb-6">
-				Biosalubrity no solo fue parte de la solución, fue un actor clave para salvar vidas y construir un futuro más seguro.
+				{t.affiliate.description}
 			</p>
 			<div class="hidden lg:block">
 				<a  href="#historia" class="flex items-center justify-center bg-linear-(--linear-btns) w-50 py-3 px-4 text-white rounded-full">
-					Se parte del cambio
+					{t.affiliate.cta}
 					<svg fill="#ffffff" version="1.1" class="h-4 pl-1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 123.97 123.97" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M27.961,99.367c-5.8,5.8-5.7,15.3,0.5,20.899c5.8,5.301,14.8,4.801,20.3-0.8l47.3-47.3c2.8-2.8,4.2-6.5,4.2-10.2 s-1.4-7.399-4.2-10.2l-47.2-47.3c-5.5-5.5-14.6-6.1-20.3-0.8c-6.1,5.6-6.3,15.1-0.5,20.9l30.2,30.399c3.9,3.9,3.9,10.2,0,14.101 L27.961,99.367z"></path> </g> </g></svg>
 				</a>	
 			</div>
@@ -207,7 +212,7 @@ import afiliateDesktop from '../assets/images/afiliate-desktop.png';
 
 	<div class="block mx-auto mt-8 mb-16 lg:hidden text-center">
 		<a  href="#historia" class="mx-auto flex items-center justify-center bg-linear-(--linear-btns) w-56 py-3 px-4 text-white rounded-full font-bold">
-			Se parte del cambio
+			{t.affiliate.cta}
 			<svg fill="#ffffff" version="1.1" class="h-4 pl-1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 123.97 123.97" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M27.961,99.367c-5.8,5.8-5.7,15.3,0.5,20.899c5.8,5.301,14.8,4.801,20.3-0.8l47.3-47.3c2.8-2.8,4.2-6.5,4.2-10.2 s-1.4-7.399-4.2-10.2l-47.2-47.3c-5.5-5.5-14.6-6.1-20.3-0.8c-6.1,5.6-6.3,15.1-0.5,20.9l30.2,30.399c3.9,3.9,3.9,10.2,0,14.101 L27.961,99.367z"></path> </g> </g></svg>
 		</a>	
 	</div>
