@@ -18,93 +18,103 @@ import Handshake from '../../assets/icons/handshake.svg';
 import heroBg from '../../assets/images/hero-bg.png';
 import minsaLogo from '../../assets/images/minsa-logo.png';
 import congresoLogo from '../../assets/images/congreso-logo.png';
-import afiliateBg from '../../assets/images/afiliate-bg.png';
+import afiliateDesktop from '../../assets/images/afiliate-desktop.png';
+import afiliateMobile from '../../assets/images/afiliate-mobile.png';
 ---
 
 <Layout>
-
-	<section id="inicio" class="mt-24">
-		<div class="max-w-7xl mx-auto py-32">
-			<div class="flex flex-col max-w-110 font-poppins">
-				<h1 class="tracking-wide text-5xl font-black bg-linear-(--linear-title) bg-clip-text text-transparent mb-6">
-				  In the most critical moments, public health was not an option—it was the solution.
+	<section id="inicio" class="mt-16 md:mt-18 lg:mt-22 xl:mt-24">
+		<div class="max-w-7xl mx-auto px-4 md:px-6 pt-8 md:py-28 lg:py-20">
+			<div class="flex flex-col md:max-w-1/2 lg:max-w-110 font-poppins">
+				<h1 class="tracking-wider md:tracking-wide leading-normal md:leading-snug text-3xl lg:text-5xl font-black bg-linear-(--linear-title) bg-clip-text text-transparent mb-6 md:mb-2">
+					In the most critical moments, public health was not an option—it was the solution.
 				</h1>
-				<p class="text-lg font-medium mb-6">Biosalubrity was launched in the midst of the pandemic to protect lives, support businesses, and help the economy recover with confidence.</p>
-				<a href="#historia" class="btn w-fit px-10 mb-6">
-					<div class="flex items-center px-3">
+				<p class="text-base leading-relaxed md:text-lg font-medium mb-6">
+					Biosalubrity was launched in the midst of the pandemic to protect lives, support businesses, and help the economy recover with confidence.
+				</p>
+				<div class="mb-0 lg:mb-6">
+					<a href="#historia" class="btn w-fit flex items-center px-3">
 						Learn about our history
 						<svg fill="#ffffff" version="1.1" class="h-4 pl-1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 123.97 123.97" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M27.961,99.367c-5.8,5.8-5.7,15.3,0.5,20.899c5.8,5.301,14.8,4.801,20.3-0.8l47.3-47.3c2.8-2.8,4.2-6.5,4.2-10.2 s-1.4-7.399-4.2-10.2l-47.2-47.3c-5.5-5.5-14.6-6.1-20.3-0.8c-6.1,5.6-6.3,15.1-0.5,20.9l30.2,30.399c3.9,3.9,3.9,10.2,0,14.101 L27.961,99.367z"></path> </g> </g></svg>
-					</div>	
-				</a>
-				<p class="text-lg font-medium">Public health for a <span class="text-complementary">safer world.</span></p>
+					</a>	
+				</div>
+				<p class="hidden lg:block text-lg font-medium">Public health for a <span class="text-complementary">safer world.</span></p>
+			</div>
+			<div class="md:hidden relative h-80 w-screen left-1/2 right-1/2 mx-[-50vw]">
+				<Image class="w-full h-full object-cover object-bottom-right" src={heroBg} alt="Imagen de seguridad sanitaria"></Image>
+				<div class="absolute inset-x-0 top-0 h-1/3 bg-linear-to-b from-white to-transparent pointer-events-none"></div>
 			</div>
 		</div>
 	</section>
 
-	<section class="max-w-7xl w-fit mx-auto p-4 -mt-10 bg-white rounded-xl shadow-md mb-20">
-		<div class="flex justify-center items-center">
-			<div class="flex items-center py-5 px-10">
-				<Protegemos class="h-16 w-auto mr-4"/>
-				<div>
-					<h3 class="uppercase text-lg font-bold">WE PROTECT</h3>
-					<p class="text-base max-w-30">People and businesses</p>
+	<section id="servicios" class="max-w-7xl w-auto mx-auto px-4 mb-12 lg:-mt-10 lg:mb-20">
+		<div class="bg-white rounded-xl shadow-md">
+			<div class="flex flex-col md:flex-row justify-center items-start lg:items-center flex-wrap py-4 lg:py-0">
+				<div class="servicio flex items-center md:w-75 p-4 lg:py-5 lg:px-10">
+					<Protegemos class="h-16 w-auto mr-4"/>
+					<div>
+						<h3 class="uppercase text-lg font-bold">WE PROTECT</h3>
+						<p class="text-base lg:max-w-30">People and businesses</p>
+					</div>
 				</div>
-			</div>
-			<div class="h-16 w-0.5 bg-slate-200"></div>
-			<div class="flex items-center py-5 px-10">
-				<Verificamos class="h-16 w-auto mr-4" />
-				<div>
-					<h3 class="uppercase text-lg font-bold">We verify</h3>
-					<p class="text-base max-w-30">compliance with protocols</p>
+				<div class="hidden lg:block h-16 w-0.5 bg-slate-200"></div>
+				<div class="servicio flex items-center md:w-75 p-4 lg:py-5 lg:px-10">
+					<Verificamos class="h-16 w-auto mr-4" />
+					<div>
+						<h3 class="uppercase text-lg font-bold">WE VERIFY</h3>
+						<p class="text-base lg:max-w-30">Compliance with protocols</p>
+					</div>
 				</div>
-			</div>
-			<div class="h-16 w-0.5 bg-slate-200"></div>
-			<div class="flex items-center py-5 px-10">
-				<Certificamos class="h-16 w-auto mr-4"/>
-				<div>
-					<h3 class="uppercase text-lg font-bold">We certify</h3>
-					<p class="text-base max-w-30">With trusted brands</p>
+				<div class="hidden lg:block h-16 w-0.5 bg-slate-200"></div>
+				<div class="servicio flex items-center md:w-75 p-4 lg:py-5 lg:px-10">
+					<Certificamos class="h-16 w-auto mr-4"/>
+					<div>
+						<h3 class="uppercase text-lg font-bold">WE CERTIFY</h3>
+						<p class="text-base lg:max-w-30">With trusted brands</p>
+					</div>
 				</div>
-			</div>
-			<div class="h-16 w-0.5 bg-slate-200"></div>
-			<div class="flex items-center py-5 px-10">
-				<People class="h-16 w-auto mr-4"/>
-				<div>
-					<h3 class="uppercase text-lg font-bold">We prioritize</h3>
-					<p class="text-base max-w-40">public health and economic recovery</p>
+				<div class="hidden lg:block h-16 w-0.5 bg-slate-200"></div>
+				<div class="servicio flex items-center md:w-75 p-4 lg:py-5 lg:px-10">
+					<People class="h-16 w-auto mx-4 lg:ml-0"/>
+					<div>
+						<h3 class="uppercase text-lg font-bold">WE PRIORITIZE</h3>
+						<p class="text-base lg:max-w-40">Public health and economic recovery</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-
-	<section id="historia" class="max-w-7xl mx-auto bg-white rounded-xl py-16 px-10 mb-20">
+	
+	<section id="historia" class="max-w-7xl mx-auto bg-white rounded-xl py-12 lg:py-16 px-4 lg:px-10 mb-12 lg:mb-20">
 		<h2 class="tracking-wide text-3xl font-black bg-linear-(--linear-btns) bg-clip-text text-transparent mb-4 text-center font-poppins">
 			We were founded when we were needed most
 		</h2>
-		<p class="text-lg text-center font-inter mb-10">March 2020. The world came to a standstill. We decided to take action.</p>
-		<div class="flex justify-center items-center gap-5">
-			<div class="flex flex-col items-center justify-center p-5 border border-slate-200 rounded-xl shadow">
-				<Heart class="h-20 w-auto mb-4"/>
+		<p class="text-base lg:text-lg text-center font-inter mb-10">
+			March 2020. The world stopped. We decided to act.
+		</p>
+		<div class="flex flex-col md:flex-row justify-center items-center gap-5 flex-wrap">
+			<div class="flex md:max-w-75 lg:max-w-64 flex-col items-center justify-center p-5 border border-slate-200 rounded-xl shadow">
+				<Heart class="h-20 w-auto mb-0 lg:mb-4"/>
 				<div class="h-0.5 w-16 bg-slate-200 my-2"></div>
 				<div class="text-center">
 					<h3 class="uppercase text-4xl font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">~40MIL</h3>
 					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">Lives</p>
-					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">Saved</p>
+					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">Preserved</p>
 					<p class="text-base font-inter">through preventive measures at a time when there were no vaccines available worldwide.</p>
 				</div>
 			</div>
-			<div class="flex flex-col items-center justify-center p-5 border border-slate-200 rounded-xl shadow">
-				<Protegemos class="h-20 w-auto mb-4"/>
+			<div class="flex md:max-w-75 lg:max-w-64 flex-col items-center justify-center p-5 border border-slate-200 rounded-xl shadow">
+				<Protegemos class="h-20 w-auto mb-0 lg:mb-4"/>
 				<div class="h-0.5 w-10 bg-slate-200 my-2"></div>
 				<div class="text-center">
 					<h3 class="uppercase text-4xl font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">Thousands</h3>
-					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">of businesses</p>
-					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">Protected</p>
-					<p class="text-base font-inter">across various sectors are implementing biosafety protocols.</p>
+					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">of establishments</p>
+					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">protected</p>
+					<p class="text-base font-inter">of various sectors implementing biosecurity protocols.</p>
 				</div>
 			</div>
-			<div class="flex flex-col items-center justify-center p-5 border border-slate-200 rounded-xl shadow">
-				<Person class="h-20 w-auto mb-4"/>
+			<div class="flex md:max-w-75 lg:max-w-64 flex-col items-center justify-center p-5 border border-slate-200 rounded-xl shadow">
+				<Person class="h-20 w-auto mb-0 lg:mb-4"/>
 				<div class="h-0.5 w-10 bg-slate-200 my-2"></div>
 				<div class="text-center">
 					<h3 class="uppercase text-4xl font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">Millions</h3>
@@ -113,29 +123,29 @@ import afiliateBg from '../../assets/images/afiliate-bg.png';
 					<p class="text-base font-inter">in safer environments thanks to our platform and certification.</p>
 				</div>
 			</div>
-			<div class="flex flex-col items-center justify-center p-5 border border-slate-200 rounded-xl shadow">
-				<Analithics class="h-20 w-auto mb-4"/>
+			<div class="flex md:max-w-75 lg:max-w-64 flex-col items-center justify-center p-5 border border-slate-200 rounded-xl shadow">
+				<Analithics class="h-20 w-auto mb-0 lg:mb-4"/>
 				<div class="h-0.5 w-10 bg-slate-200 my-2"></div>
 				<div class="text-center">
 					<h3 class="uppercase text-4xl font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">promote</h3>
 					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">Economic</p>
-					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">reactivation</p>
-					<p class="text-base font-inter">building trust and contributing to the country's recovery.</p>
+					<p class="uppercase text-lg font-bold bg-linear-(--linear-title) bg-clip-text text-transparent">Reactivation</p>
+					<p class="text-base font-inter">generating confidence and contributing to the country's recovery.</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="reconocimiento" class="max-w-7xl mx-auto bg-white rounded-xl py-12 px-10 mb-20">
+	<section id="reconocimiento" class="max-w-7xl mx-auto bg-white rounded-xl py-12 lg:py-16 px-4 lg:px-10 mb-12 lg:mb-20">
 		<h2 class="tracking-wide text-3xl font-black bg-linear-(--linear-btns) bg-clip-text text-transparent my-4 text-center font-poppins">
 			Awards that underscore our impact
 		</h2>
-		<div class="flex justify-center items-start">
-			<div class="flex items-start justify-start p-5">
+		<div class="flex flex-col md:flex-row justify-center items-center md:items-start flex-wrap md:gap-5">
+			<div class="flex items-start justify-start md:max-w-75 lg:max-w-64 p-4 lg:p-5">
 				<div class="p-4 mr-4 rounded-full border-2 border-complementary">
-					<Verificamos class="h-16 -mt-1 fill-complementary"/>
+					<Verificamos class="h-12 lg:h-16 -mt-1 fill-complementary"/>
 				</div>
-				<div class="text-left max-w-40">
+				<div class="text-left w-auto lg:max-w-40">
 					<h3 class="uppercase text-lg font-bold text-slate-800">
 						Finalists for the Business Creativity Award
 					</h3>
@@ -143,11 +153,11 @@ import afiliateBg from '../../assets/images/afiliate-bg.png';
 					<PwcLogo class="w-16 h-auto" />
 				</div>
 			</div>
-			<div class="flex items-start justify-start p-5">
+			<div class="flex items-start justify-start md:max-w-75 lg:max-w-64 p-4 lg:p-5">
 				<div class="p-4 mr-4 rounded-full border-2 border-complementary">
-					<People class="h-16 -mt-1"/>
+					<People class="h-12 lg:h-16 -mt-1"/>
 				</div>
-				<div class="text-left max-w-40">
+				<div class="text-left w-auto lg:max-w-40">
 					<h3 class="uppercase text-lg font-bold text-slate-800">
 						Approved platform
 					</h3>
@@ -155,57 +165,98 @@ import afiliateBg from '../../assets/images/afiliate-bg.png';
 					<Image class="w-36 h-auto" src={minsaLogo} alt="Logo del MINSA"></Image>
 				</div>
 			</div>
-			<div class="flex items-start justify-start p-5">
+			<div class="flex items-start justify-start md:max-w-75 lg:max-w-64 p-4 lg:p-5">
 				<div class="p-4 mr-4 rounded-full border-2 border-complementary">
-					<Gob class="h-16 -mt-1"/>
+					<Gob class="h-12 lg:h-16 -mt-1"/>
 				</div>
-				<div class="text-left max-w-40">
+				<div class="text-left w-auto lg:max-w-40">
 					<h3 class="uppercase text-lg font-bold text-slate-800">
 						Recognized by the Congress of the Republic
 					</h3>
-					<Image class="h-24 w-auto" src={congresoLogo} alt="Logo del MINSA"></Image>
+					<Image class="h-20 lg:h-24 w-auto" src={congresoLogo} alt="Logo del MINSA"></Image>
 				</div>
 			</div>
-			<div class="flex items-start justify-start p-5">
+			<div class="flex items-start justify-start md:max-w-75 lg:max-w-64 p-4 lg:p-5">
 				<div class="p-4 mr-4 rounded-full border-2 border-complementary">
-					<Handshake class="h-16 w-16"/>
+					<Handshake class="h-12 lg:h-16 w-12 lg:w-16"/>
 				</div>
-				<div class="text-left max-w-40">
+				<div class="text-left w-auto lg:max-w-40">
 					<h3 class="uppercase text-lg font-bold text-slate-800">
 						Approved platform
 					</h3>
-					<p class="text-sm font-inter">Recognized for their efforts against COVID-19 and for promoting economic recovery</p>
+					<p class="text-sm font-inter">Recognized against covid and for promoting economic reactivation</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="afiliate" class="max-w-7xl mx-auto bg-white rounded-2xl py-32 px-10 mb-20">
-		<h3 class="tracking-wide text-white text-3xl font-black my-4 text-left font-poppins max-w-120 leading-snug">
-			We turned a moment of crisis into a legacy of prevention and trust
-		</h3>
-		<p class="max-w-112.5 text-xl text-white mb-6">
-			Biosalubrity wasn't just part of the solution, it was a key player in saving lives and building a safer future.
-		</p>
-		<a href="#historia" class="block">
-			<div class="flex items-center justify-center bg-linear-(--linear-btns) w-56 py-3 px-4 text-white rounded-full">
-				Be part of the change
-				<svg fill="#ffffff" version="1.1" class="h-4 pl-1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 123.97 123.97" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M27.961,99.367c-5.8,5.8-5.7,15.3,0.5,20.899c5.8,5.301,14.8,4.801,20.3-0.8l47.3-47.3c2.8-2.8,4.2-6.5,4.2-10.2 s-1.4-7.399-4.2-10.2l-47.2-47.3c-5.5-5.5-14.6-6.1-20.3-0.8c-6.1,5.6-6.3,15.1-0.5,20.9l30.2,30.399c3.9,3.9,3.9,10.2,0,14.101 L27.961,99.367z"></path> </g> </g></svg>
-			</div>	
-		</a>
+	<section id="afiliate" class=" max-w-7xl w-full px-4 h-auto mb-4 lg:mb-12 mx-auto">
+		<div class="relative w-full rounded-2xl p-4 md:max-w-7/12 lg:max-w-none lg:py-32 lg:px-10 lg:mb-20 md:mx-auto">
+			<h3 class="tracking-wide text-white text-2xl md:text-3xl font-black my-4 text-left font-poppins max-w-120 leading-snug">
+				We turned a moment of crisis into a legacy of prevention and trust
+			</h3>
+			<p class="max-w-112.5 text-base md:text-xl text-white mb-96 lg:mb-6">
+				Biosalubrity wasn't just part of the solution, it was a key player in saving lives and building a safer future.
+			</p>
+			<div class="hidden lg:block">
+				<a  href="#historia" class="flex items-center justify-center bg-linear-(--linear-btns) w-50 py-3 px-4 text-white rounded-full">
+					Be part of the change
+					<svg fill="#ffffff" version="1.1" class="h-4 pl-1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 123.97 123.97" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M27.961,99.367c-5.8,5.8-5.7,15.3,0.5,20.899c5.8,5.301,14.8,4.801,20.3-0.8l47.3-47.3c2.8-2.8,4.2-6.5,4.2-10.2 s-1.4-7.399-4.2-10.2l-47.2-47.3c-5.5-5.5-14.6-6.1-20.3-0.8c-6.1,5.6-6.3,15.1-0.5,20.9l30.2,30.399c3.9,3.9,3.9,10.2,0,14.101 L27.961,99.367z"></path> </g> </g></svg>
+				</a>	
+			</div>
+			<div class="absolute inset-x-0 top-0 h-1/5 bg-linear-to-b from-black/40 to-transparent pointer-events-none rounded-xl"></div>
+		</div>
 	</section>
+
+	<div class="block mx-auto mt-8 mb-16 lg:hidden text-center">
+		<a  href="#historia" class="mx-auto flex items-center justify-center bg-linear-(--linear-btns) w-56 py-3 px-4 text-white rounded-full font-bold">
+			Be part of the change
+			<svg fill="#ffffff" version="1.1" class="h-4 pl-1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 123.97 123.97" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M27.961,99.367c-5.8,5.8-5.7,15.3,0.5,20.899c5.8,5.301,14.8,4.801,20.3-0.8l47.3-47.3c2.8-2.8,4.2-6.5,4.2-10.2 s-1.4-7.399-4.2-10.2l-47.2-47.3c-5.5-5.5-14.6-6.1-20.3-0.8c-6.1,5.6-6.3,15.1-0.5,20.9l30.2,30.399c3.9,3.9,3.9,10.2,0,14.101 L27.961,99.367z"></path> </g> </g></svg>
+		</a>	
+	</div>
 	
 </Layout>
 
-<style define:vars={{ heroUrl: `url(${heroBg.src})`, afiliateBg: `url(${afiliateBg.src})`}}>
+<style define:vars={{ 
+	heroUrl: `url(${heroBg.src})`, 
+	afiliateDesktop: `url(${afiliateDesktop.src},)`,
+	afiliateMobile: `url(${afiliateMobile.src})`
+}}>
 #inicio {
-	background-image: var(--heroUrl);
-	background-size: cover;
+	background-color: white;
+	scroll-margin-top: 100px;
 }
 
-#afiliate {
-	background-image: var(--afiliateBg);
+#historia {
+	scroll-margin-top: 100px;
+}
+
+#afiliate > div:first-of-type {
+	background-image: var(--afiliateMobile);
 	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat;
+	scroll-margin-top: 100px;
+}
+
+#reconocimiento {
+	scroll-margin-top: 80px;
+}
+
+@media (width >= 48rem) { 
+	#inicio {
+		background-image: var(--heroUrl);
+		background-size: cover;
+	}
+}
+
+@media (width >= 64rem) { 
+	#reconocimiento {
+		scroll-margin-top: 100px;
+	}
+	#afiliate > div:first-of-type {
+		background-image: var(--afiliateDesktop);
+		background-size: cover;
+	}
 }
 </style>

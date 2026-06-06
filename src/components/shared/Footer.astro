@@ -5,11 +5,18 @@ import logo from '../../assets/images/logo.png';
 import Whatsapp from '../../assets/icons/whatsapp.svg'
 import Facebook from '../../assets/icons/facebook.svg'
 import Instagram from '../../assets/icons/instagram.svg'
+
+// Importar las traducciones según el idioma actual
+import en from '../../locales/en.json';
+import es from '../../locales/es.json';
+
+const locale = Astro.currentLocale || 'es';
+const translations = locale === 'en' ? en : es;
 ---
 
 <footer class="flex flex-col items-center bg-white p-4">
   <Image class="h-16 w-auto mt-4 mb-2" src={logo} alt="Logo de la empresa"></Image>
-  <p class="text-center text-base mb-2 font-semibold text-slate-600">Seguridad sanitaria para un mundo más seguro.</p>
+  <p class="text-center text-base mb-2 font-semibold text-slate-600">{translations.footer.tagline}</p>
   <div class="flex gap-4 py-4">
     <a href="">
       <Whatsapp class="w-8 h-8 opacity-70 hover:opacity-100 transition-opacity duration-300" />
@@ -21,5 +28,5 @@ import Instagram from '../../assets/icons/instagram.svg'
       <Instagram class="w-8 h-8 opacity-70 hover:opacity-100 transition-opacity duration-300" />
     </a>
   </div>
-  <p class="text-xs text-slate-600">&copy; 2024 Biosalubrity. Todos los derechos reservados.</p>
+  <p class="text-xs text-slate-600">{translations.footer.copyright}</p>
 </footer>

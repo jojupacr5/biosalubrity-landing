@@ -17,8 +17,8 @@ import Handshake from '../assets/icons/handshake.svg';
 import heroBg from '../assets/images/hero-bg.png';
 import minsaLogo from '../assets/images/minsa-logo.png';
 import congresoLogo from '../assets/images/congreso-logo.png';
-import afiliateBg from '../assets/images/afiliate-bg.png';
 import afiliateMobile from '../assets/images/afiliate-mobile.png';
+import afiliateDesktop from '../assets/images/afiliate-desktop.png';
 ---
 
 <Layout>
@@ -215,7 +215,7 @@ import afiliateMobile from '../assets/images/afiliate-mobile.png';
 
 <style define:vars={{ 
 	heroUrl: `url(${heroBg.src})`, 
-	afiliateBg: `url(${afiliateBg.src},)`,
+	afiliateDesktop: `url(${afiliateDesktop.src},)`,
 	afiliateMobile: `url(${afiliateMobile.src})`
 }}>
 #inicio {
@@ -251,7 +251,7 @@ import afiliateMobile from '../assets/images/afiliate-mobile.png';
 		scroll-margin-top: 100px;
 	}
 	#afiliate > div:first-of-type {
-		background-image: var(--afiliateBg);
+		background-image: var(--afiliateDesktop);
 		background-size: cover;
 	}
 }
