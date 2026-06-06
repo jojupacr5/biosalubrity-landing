@@ -5,7 +5,24 @@ import { Font } from 'astro:assets';
 import Header from '../components/shared/Header.astro';
 import Footer from '../components/shared/Footer.astro';
 
+// Importar traducciones
+import en from '../locales/en.json';
+import es from '../locales/es.json';
+
 const locale = Astro.currentLocale || 'es';
+const translations = locale === 'en' ? en : es;
+
+interface Props {
+	title?: string;
+	description?: string;
+	image?: string;
+}
+
+const { 
+	title = translations.seo.title, 
+	description = translations.seo.description, 
+	image = 'https://biosalubrity.com/_astro/logo.jWwzPPcg_1pyKEc.webp' 
+} = Astro.props as Props;
 ---
 
 <!doctype html>
@@ -16,7 +33,25 @@ const locale = Astro.currentLocale || 'es';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Biosalubrity</title>
+		<title>{title}</title>
+
+		<!-- Meta tags -->
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content={title} />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={image} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
 
 		<Font cssVariable='--font-poppins' />
 		<Font cssVariable='--font-inter' />

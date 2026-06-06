@@ -188,7 +188,7 @@ import afiliateDesktop from '../assets/images/afiliate-desktop.png';
 	</section>
 
 	<section id="afiliate" class=" max-w-7xl w-full px-4 h-auto mb-4 lg:mb-12 mx-auto">
-		<div class="relative w-full rounded-2xl p-4 md:max-w-7/12 lg:max-w-none lg:py-32 lg:px-10 lg:mb-20 md:mx-auto">
+		<div id="afiliateBg" class="relative w-full rounded-2xl p-4 md:max-w-7/12 lg:max-w-none lg:py-32 lg:px-10 lg:mb-20 md:mx-auto">
 			<h3 class="tracking-wide text-white text-2xl md:text-3xl font-black my-4 text-left font-poppins max-w-120 leading-snug">
 				Transformamos un momento de crisis en un legado de prevención y confianza
 			</h3>
@@ -215,7 +215,7 @@ import afiliateDesktop from '../assets/images/afiliate-desktop.png';
 
 <style define:vars={{ 
 	heroUrl: `url(${heroBg.src})`, 
-	afiliateDesktop: `url(${afiliateDesktop.src},)`,
+	afiliateDesktop: `url(${afiliateDesktop.src})`,
 	afiliateMobile: `url(${afiliateMobile.src})`
 }}>
 #inicio {
@@ -227,7 +227,7 @@ import afiliateDesktop from '../assets/images/afiliate-desktop.png';
 	scroll-margin-top: 100px;
 }
 
-#afiliate > div:first-of-type {
+#afiliateBg {
 	background-image: var(--afiliateMobile);
 	background-size: cover;
 	background-position: center;
@@ -250,7 +250,7 @@ import afiliateDesktop from '../assets/images/afiliate-desktop.png';
 	#reconocimiento {
 		scroll-margin-top: 100px;
 	}
-	#afiliate > div:first-of-type {
+	#afiliateBg {
 		background-image: var(--afiliateDesktop);
 		background-size: cover;
 	}
